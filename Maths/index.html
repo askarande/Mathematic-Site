@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+    <meta name="description" content="maths Site">
+    
+    <script src="https://kit.fontawesome.com/48e7b06ab1.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/index.css" type="text/css" media="all" />
+    
+    <title>@k - Maths</title>
+    
+    <style type="text/css" media="all">
+    
+      #para1, #div1 p{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      
+      #para1::first-letter, #ent::first-letter{
+        color: red;
+        font-size: 25px;
+      }
+      
+      /*#res{
+        border: 2px solid black;
+        display: none;
+        width: auto;
+        height: auto;
+      }
+      */
+      
+      #hel, #count, #height, #base, #hei2, #base2, #num5{
+        height: 30px;
+        border-radius: 15px;
+        padding-left: 5px;
+      }
+      
+      
+      #res3{
+        font-weight: 700;
+        width: 30%;
+        font-size: 1.7rem;
+        border-radius: 15px;
+        border: 2px solid red;
+      }
+      
+      #btn, #btn2, #btn3, #btn4, #btn5, #btn6{
+        background-color: #000;
+        color: white;
+        padding: 6px 10px 6px;
+        border: 1px solid white;
+        border-radius: 15px;
+        font-size: 20px;
+      }
+      
+      #divAre, #circ, #div1, #table, #tria, #rect, #calculator, #countdwn, #ann, #res4{
+        display: none;
+      }
+      
+      #btn6, #btn4 {
+        margin-right: 10px;
+      }
+      
+      .brd{
+        border: 2px solid black;
+        width: 50%;
+      }
+ 
+      
+      #countdwn input{
+        height: 30px;
+        border-radius: 15px;
+        padding-left: 5px;
+      }
+      
+      #countdwn h1::first-letter {
+        color: red;
+      }
+      
+    </style>
+    
+  </head>
+  <body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <nav class="nav">
+      <div class="nav-bar">
+        
+        <h1 id="logo">@k - Maths</h1>
+        
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        
+        <input type="checkbox" id="check" value="check" />
+        
+        <ul>
+          <li id="home">Home</li>
+        </ul>
+        
+      </div>
+    </nav>
+    <br />
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  <center>
+    <div class="data">
+     
+      <label class="choose" for="opt">
+        
+        Choose the following : 
+        
+      </label>
+      
+      <select name="opt" id="opt" onchange="selection()">
+        
+        <option value="0">Select</option>
+        
+        <option value="1">Find table</option>
+        
+        <option id="area" value="2">Find area</option>
+        
+        <option value="4">Find Prime Number</option>
+        
+        <option id="square" value="3">Find Sqare</option>
+        
+        <option value="calculator">Calculator</option>
+        
+        <option value="countdown">Count Down</option>
+        
+      </select>
+    </div>
+    <br />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="div1">
+      
+      <p id="ent">Enter Number : </p>
+      <br />
+      
+      <input type="number" name="num" id="hel" value="" required=""/>
+      <br /> <br />
+      
+      <button id="btn" onclick="myable(); fun1();" type="submit">Click Here</button>
+      <br /> <br />
+      
+      <p id="dfd" class="brd"></p>
+      
+      <div id="ann">
+        <p id="ans1" class="brd"></p>
+        <p id="ans2" class="brd"></p>
+        <p id="ans3" class="brd"></p>
+        <p id="ans4" class="brd"></p>
+        <p id="ans5" class="brd"></p>
+        <p id="ans6" class="brd"></p>
+        <p id="ans7" class="brd"></p>
+        <p id="ans8" class="brd"></p>
+        <p id="ans9" class="brd"></p>
+        <p id="ans10" class="brd"></p> 
+        
+      </div>
+     
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="divAre" onchange="change()">
+      
+      <label> Select One of Following :  </label>
+      
+      <br />
+      <br />
+      
+      <input type="radio" name="select" id="tri" value="1" onclick="tri1()"/>
+      
+      <label for="tri">Triangle</label>
+      
+      &nbsp; &nbsp;
+      
+      <input type="radio" name="select" id="rec" value="2" onclick="myrec()" />
+      
+      <label for="rec">Rectangle</label>
+      
+      &nbsp; &nbsp;
+      
+      <input type="radio" value="3" name="select" id="cir" />
+      
+      <label for="cir">Circle</label>
+      
+    </div>
+    <br /> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="tria">
+      
+      <p>Enter a Height : </p>
+      
+      <input type="number" name="height" id="height" value="" />
+      
+      <br /> <br />
+      
+      <p>Enter a Base : </p>
+      
+      <input type="number" name="base" id="base" value="" />
+      
+      <br /> <br />
+      
+      <button id="btn2" type="submit" onclick="myrdd()">Click here</button>
+      
+      <br /> <br />
+      
+      <p id="res1"></p>
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="rect">
+      
+      <p>Enter a Height : </p>
+      
+      <input type="number" name="hei2" id="hei2" value="" />
+      
+      <br /> <br />
+      
+      <p>Enter a Width : </p>
+      
+      <input type="number" name="base2" id="base2" value="" />
+      
+      <br /> <br />
+      
+      <button id="btn3" type="submit" onclick="myRcd()">Click here</button>
+      
+      <br /> <br />
+      
+      <p id="res2"></p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="circ">
+      
+      <p id="para1">Enter a Radius : </p>
+      <br />
+      
+      <input type="number" name="num5" id="num5" value="" />
+      <br /> <br />
+      
+      <button type="submit" onclick="circRa(); fun2();" id="btn5">Click here</button>
+      <br /> <br />
+      
+      <p id="res4"></p>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="prime">
+      
+      
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="calculator">
+      
+      <p>Calculator</p>
+      
+      
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="countdwn">
+      
+      <h1>Count Down</h1> 
+      <br />
+      
+      <p>Enter a number in a min</p> 
+      <br />
+      
+      <input type="number" name="num3" id="count" value="" /> 
+      <br /> <br />
+      
+      <p id="res3"></p>
+      
+      <button type="submit" id="btn4">Start</button> 
+      
+      <button type="submit" id="btn6">Stop</button>
+      <br />
+      
+    </div>
+  </center>
+ 
+
+   <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+    
+  </body>
+</html>
